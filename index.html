@@ -4,24 +4,8 @@
       <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-      <script type=text/javascript>
-        $(function() {
-            $('#calculate').click(function(){
-              $.ajax({
-                url: '/addnumber',
-                data:{
-                  a: $('#a').val(),
-                  b: $('#b').val()
-                },
-                dataType: 'JSON',
-                type: 'GET',
-                success: function(data){
-                    $("#result").html(data.result);
-                }
-                });
-             });
-        });
-  </script>
+      <script type="text/javascript" src="script.js"></script>
+        
   </head>
   <body>
     <div class="container">
