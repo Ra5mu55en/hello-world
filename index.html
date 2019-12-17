@@ -15,10 +15,11 @@
     <script type="text/javascript">
 
     function runPyScript(input){
-        var jqXHR = $.ajax({
-            type: "GET",
+      var jqXHR = $.ajax({
+            type: "POST",
             url: "/login",
-            async: false
+            async: false,
+            data: { mydata: input }
         });
 
         return jqXHR.responseText;
