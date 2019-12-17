@@ -1,5 +1,4 @@
 $('#calculate').click(function(){
-        $("#result").html("yolo");
         $.ajax({
             url: '/addnumber',
             data:{
