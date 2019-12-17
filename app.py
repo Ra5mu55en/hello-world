@@ -12,5 +12,4 @@ def move_forward():
     return render_template('index.html', forward_message=forward_message);
 
 
-if __name__ == "__main__":
-    app.run()
+
