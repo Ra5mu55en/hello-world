@@ -8,11 +8,12 @@ sentry_sdk.init(
 
 @app.route('/')
 def index():
+    alert('In index')
     return render_template('index.html')
 
 @app.route('/submit')
 def submit():
-    print('In SomeFunction')
+    alert('In submit')
     return "Nothing"
 
 
