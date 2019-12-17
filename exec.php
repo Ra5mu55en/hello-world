@@ -1,5 +1,5 @@
 html><body> 
 <? 
-exec("nibTest.py"); 
+exec("app.py"); 
 ?>
 </body></html>
