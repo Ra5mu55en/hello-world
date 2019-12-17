@@ -11,7 +11,7 @@ $('#calculate').click(function(){
                 $("#result").html(data.result);
             }
         }).fail(function() {
-            $("#result").html("yo");
+            //$("#result").html("yo");
         });
 });
     
