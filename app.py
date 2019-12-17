@@ -11,5 +11,6 @@ def move_forward():
     forward_message = "Moving Forward..."
     return render_template('index.html', forward_message=forward_message);
 
-
+if __name__=="__main__":
+    app.run()
 
