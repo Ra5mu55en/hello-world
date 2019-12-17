@@ -10,7 +10,7 @@
   </head>
   <body>
     <input id="submitbutton" type="submit" value="Test Send Data">
-    <span id="result">?</span>
+    <span id="result">$</span>
     <span id="result1">#</span>
     <!----------------------------------->
     <script type="text/javascript">
@@ -24,10 +24,10 @@
             $('#result1').html('fries');
           }
         });
-        $.get('person.csv', function(data) {
-          data;
+        $.get('persons.csv', function(data) {
+          $('#result').html(data);
         }, "text").fail(function(jqXHR) {
-          console.log("There was a problem contacting the server: " + jqXHR.status + " " + jqXHR.responseText);
+          alert("There was a problem contacting the server: " + jqXHR.status + " " + jqXHR.responseText);
       });
     });
     </script>
