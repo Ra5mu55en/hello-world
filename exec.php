@@ -1,4 +1,4 @@
-html><body> 
+<html><body> 
 <? 
 exec("app.py"); 
 ?>
