@@ -16,7 +16,7 @@
     <script type="text/javascript">
     function runPyScript() {
       $.ajax({
-                url: '/',
+                url: 'exec.php',
                 dataType: 'text',
                 type: 'GET',
                 success: function(data){
@@ -30,7 +30,6 @@
     $('#submitbutton').click(function(){
         result = runPyScript();
         $('#result').html('Got back ' + result);
-        console.log('Got back ' + result);
     });
     </script>
   </body>
