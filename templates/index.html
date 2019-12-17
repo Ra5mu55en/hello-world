@@ -14,7 +14,7 @@
     <span id="result1">#</span>
     <!----------------------------------->
     <script type="text/javascript">
-    runPyScript() {
+    function runPyScript() {
       $.ajax({
                 url: '/',
                 dataType: 'text',
@@ -32,6 +32,6 @@
         $('#result').html('Got back ' + result);
         console.log('Got back ' + result);
     });
-</script>
+    </script>
   </body>
 </html>
