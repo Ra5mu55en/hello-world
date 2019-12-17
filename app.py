@@ -10,7 +10,7 @@ sentry_sdk.init(
 def index():
     return render_template('index.html')
 
-@app.route('/SomeFunction')
+@app.route('/submit')
 def SomeFunction():
     print('In SomeFunction')
     return "Nothing"
