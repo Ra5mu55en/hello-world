@@ -12,12 +12,15 @@
   <body>
     <button id="mybutton" name="forwardBtn" type="submit">Submit</button>
     <span id="result">$</span>
-    <span id="result1">#</span>
+    <span id="result1">*</span>
     <!----------------------------------->
     <script type="text/javascript">
     
     $(function() { $("#mybutton").click(function (event) { $.getJSON('/SomeFunction', { },
-    function(data) {$("#result").html(data); }); return false; }); });
+    function(data) {
+      $("#result1").html("hot dog");
+      //$("#result").html(JSON.stringify(data));
+    }); return false; }); });
 //     $('#submitbutton').click(function(){
 //         $.ajax({
 //           url: 'exec.php',
