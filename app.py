@@ -1,9 +1,14 @@
-from flask import Flask
-app = Flask(__name__)
- 
-@app.route("/")
-def hello():
-    return "Welcome to Python Flask!"
- 
-if __name__ == "__main__":
-    app.run()
+import csv
+
+def main():
+    with open('persons.csv', 'wb') as csvfile:
+    filewriter = csv.writer(csvfile, delimiter=',',
+                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    filewriter.writerow(['Name', 'Profession'])
+    filewriter.writerow(['Derek', 'Software Developer'])
+    filewriter.writerow(['Steve', 'Software Developer'])
+    filewriter.writerow(['Paul', 'Manager'])
+
+
+if __name__ == '__main__':
+    main()
