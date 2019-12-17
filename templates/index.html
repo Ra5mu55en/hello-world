@@ -10,27 +10,30 @@
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    <input id="submitbutton" type="submit" value="Test Send Data">
+    <form action="/submit/" method="post">
+      <button name="forwardBtn" type="submit">Submit</button>
+    </form>
     <span id="result">$</span>
     <span id="result1">#</span>
     <!----------------------------------->
     <script type="text/javascript">
     
-    $('#submitbutton').click(function(){
-        $.ajax({
-          url: 'exec.php',
-          dataType: 'text',
-          type: 'GET',
-          success: function(data) {
-            $('#result1').html('fries');
-          }
-        });
-        $.get('innovators.csv', function(data) {
-          $('#result').html(data);
-        }, "text").fail(function(jqXHR) {
-          alert("There was a problem contacting the server: " + jqXHR.status + " " + jqXHR.responseText);
-      });
-    });
+      
+//     $('#submitbutton').click(function(){
+//         $.ajax({
+//           url: 'exec.php',
+//           dataType: 'text',
+//           type: 'GET',
+//           success: function(data) {
+//             $('#result1').html('fries');
+//           }
+//         });
+//         $.get('innovators.csv', function(data) {
+//           $('#result').html(data);
+//         }, "text").fail(function(jqXHR) {
+//           alert("There was a problem contacting the server: " + jqXHR.status + " " + jqXHR.responseText);
+//       });
+//    });
     </script>
   </body>
 </html>
