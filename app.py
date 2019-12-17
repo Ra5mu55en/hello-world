@@ -11,12 +11,7 @@ def home():
 def login():
    message = None
    if request.method == 'POST':
-        datafromjs = request.form['mydata']
-        result = "return this"
-        resp = make_response('{"response": '+result+'}')
-        resp.headers['Content-Type'] = "application/json"
-        return resp
-        return render_template('login.html', message='')
-
+        return "yo"
+        
 if __name__ == "__main__":
     app.run(debug = True)
