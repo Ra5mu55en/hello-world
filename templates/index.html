@@ -10,15 +10,14 @@
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    <form action="/submit/" method="post">
-      <button name="forwardBtn" type="submit">Submit</button>
-    </form>
+    <button id="mybutton" name="forwardBtn" type="submit">Submit</button>
     <span id="result">$</span>
     <span id="result1">?</span>
     <!----------------------------------->
     <script type="text/javascript">
     
-      
+    $(function() { $("#mybutton").click(function (event) { $.getJSON('/SomeFunction', { },
+    function(data) { }); return false; }); });
 //     $('#submitbutton').click(function(){
 //         $.ajax({
 //           url: 'exec.php',
