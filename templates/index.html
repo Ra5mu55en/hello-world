@@ -14,9 +14,19 @@
     <span id="result1">$</span>
     <!----------------------------------->
     <script type="text/javascript">
+    runPyScript() {
+      $.ajax({
+                url: '/',
+                dataType: 'text',
+                type: 'GET',
+                success: function(data){
+                    $("#result").html(data);
+                }
+      });
+      return "yo";
+    }
     
     $('#submitbutton').click(function(){
-        datatosend = 'this is my matrix';
         result = runPyScript(datatosend);
         $('#result').html('Got back ' + result);
         console.log('Got back ' + result);
