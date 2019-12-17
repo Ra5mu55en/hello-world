@@ -11,6 +11,7 @@
   <body>
     <input id="submitbutton" type="submit" value="Test Send Data">
     <span id="result">?</span>
+    <span id="result1">#</span>
     <!----------------------------------->
     <script type="text/javascript">
     runPyScript() {
@@ -26,7 +27,8 @@
     }
     
     $('#submitbutton').click(function(){
-        result = runPyScript(datatosend);
+        $('#result1').html('yoo');
+        result = runPyScript();
         $('#result').html('Got back ' + result);
         console.log('Got back ' + result);
     });
