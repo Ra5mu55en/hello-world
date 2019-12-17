@@ -1,22 +1,22 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, redirect, url_for,request
 from flask import make_response
-
 app = Flask(__name__)
 
-
-@app.route('/')
+@app.route("/")
 def home():
     return "hi"
-@app.route('/index.html')
-def index():
-    return render_template('index.html')
+@app.route("/index")
 
-
-@app.route('/addnumber')
-def add():
-    a = request.args.get('a', 0, type=float)
-    b = request.args.get('b', 0, type=float)
-    return jsonify(result=a + b)
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+   message = None
+   if request.method == 'POST':
+        datafromjs = request.form['mydata']
+        result = "return this"
+        resp = make_response('{"response": '+result+'}')
+        resp.headers['Content-Type'] = "application/json"
+        return resp
+        return render_template('login.html', message='')
 
 if __name__ == "__main__":
     app.run(debug = True)
