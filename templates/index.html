@@ -20,6 +20,7 @@
                 dataType: 'text',
                 type: 'GET',
                 success: function(data){
+                    $('#result1').html('fries');
                     return data;
                 }
       });
@@ -27,7 +28,6 @@
     }
     
     $('#submitbutton').click(function(){
-        $('#result1').html('yoo');
         result = runPyScript();
         $('#result').html('Got back ' + result);
         console.log('Got back ' + result);
