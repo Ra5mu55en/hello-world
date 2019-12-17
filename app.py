@@ -1,16 +1,17 @@
-from flask import Flask, render_template, Response, request, redirect, url_for
+from flask import Flask, jsonify, render_template, request
 app = Flask(__name__)
 
-@app.route("/")
+
+@app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route("/submit/", methods=['GET', 'POST'])
-def move_forward():
-    #Moving forward code
-    forward_message = "Moving Forward..."
-    return render_template('index.html', forward_message=forward_message);
+@app.route('/SomeFunction')
+def SomeFunction():
+    print('In SomeFunction')
+    return "Nothing"
 
-if __name__=="__main__":
-    app.run()
 
+
+if __name__ == '__main__':
+   app.run()
