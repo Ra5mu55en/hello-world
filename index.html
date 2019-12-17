@@ -10,6 +10,7 @@
   </head>
   <body>
     <input id="submitbutton" type="submit" value="Test Send Data">
+    <span id="result">?</span>
     <!----------------------------------->
     <script type="text/javascript">
 
@@ -27,6 +28,7 @@
     $('#submitbutton').click(function(){
         datatosend = 'this is my matrix';
         result = runPyScript(datatosend);
+        $('#result').html('Got back ' + result);
         console.log('Got back ' + result);
     });
 
