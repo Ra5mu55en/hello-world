@@ -2,10 +2,10 @@ from flask import Flask, render_template, redirect, url_for,request
 from flask import make_response
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/"), methods=['GET', 'POST'])
 def home():
     return "hi"
-@app.route("/index")
+@app.route("/index"), methods=['GET', 'POST'])
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
