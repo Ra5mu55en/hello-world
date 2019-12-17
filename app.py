@@ -10,7 +10,7 @@ def home():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
    message = None
-   if request.method == 'POST':
+   if request.method == 'GET':
         return "yo"
         
 if __name__ == "__main__":
