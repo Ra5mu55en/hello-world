@@ -24,6 +24,11 @@
             $('#result1').html('fries');
           }
         });
+        $.get('person.csv', function(data) {
+          data;
+        }, "text").fail(function(jqXHR) {
+          console.log("There was a problem contacting the server: " + jqXHR.status + " " + jqXHR.responseText);
+      });
     });
     </script>
   </body>
