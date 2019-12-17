@@ -6,7 +6,8 @@ app = Flask(__name__)
 def home():
     return "hi"
 @app.route("/index")
-
+def index():
+    return "yo"
 @app.route("/login", methods=['GET', 'POST'])
 def login():
    message = None
