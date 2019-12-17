@@ -16,26 +16,19 @@
     <!----------------------------------->
     <script type="text/javascript">
     
-    $(function() { $("#mybutton").click(function (event) { $.getJSON('/SomeFunction', { },
-    function(data) {
-      $("#result1").html("hot dog");
-      //$("#result").html(JSON.stringify(data));
-    }); return false; }); });
-//     $('#submitbutton').click(function(){
-//         $.ajax({
-//           url: 'exec.php',
-//           dataType: 'text',
-//           type: 'GET',
-//           success: function(data) {
-//             $('#result1').html('fries');
-//           }
-//         });
-//         $.get('innovators.csv', function(data) {
-//           $('#result').html(data);
-//         }, "text").fail(function(jqXHR) {
-//           alert("There was a problem contacting the server: " + jqXHR.status + " " + jqXHR.responseText);
-//       });
-//    });
+    $('#submitbutton').click(function(){
+        $.ajax({
+          url: '/submit',
+          dataType: 'text',
+          type: 'GET',
+          success: function(data) {
+            $('#result1').html('fries');
+          }
+        }).fail(function(jqXHR) {
+          alert("There was a problem contacting the server: " + jqXHR.status + " " + jqXHR.responseText);
+      });
+        
+   });
     </script>
   </body>
 </html>
