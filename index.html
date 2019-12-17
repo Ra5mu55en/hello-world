@@ -6,23 +6,28 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></script>
-      <script type="text/javascript" src="script.js"></script>
-        
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <h3 class="text-muted">addNum</h3>
-      </div>
-      <hr/>
-      <div>
-      <p>
-    <input type="text" id='a' size="5" name="a"> +
-    <input type="text" id='b' size="5" name="b"> =
-    <span id="result">?</span>
-    <p><button class="btn btn-success" id="calculate">calculate</button>
-      </form>
-      </div>
-    </div>
+    <input id="submitbutton" type="submit" value="Test Send Data">
+    <!----------------------------------->
+    <script type="text/javascript">
+
+    function runPyScript(input){
+        var jqXHR = $.ajax({
+            type: "POST",
+            url: "/login",
+            async: false,
+            data: { mydata: input }
+        });
+
+        return jqXHR.responseText;
+    }
+
+    $('#submitbutton').click(function(){
+        datatosend = 'this is my matrix';
+        result = runPyScript(datatosend);
+        console.log('Got back ' + result);
+    });
+
   </body>
 </html>
