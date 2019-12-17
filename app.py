@@ -7,7 +7,7 @@ def home():
     return "hi"
 @app.route("/index")
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route("/login", methods=['GET', 'POST'])
 def login():
    message = None
    if request.method == 'POST':
