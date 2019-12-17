@@ -1,6 +1,10 @@
+from werkzeug.exceptions import HTTPException
 from flask import Flask, jsonify, render_template, request
 app = Flask(__name__)
 
+sentry_sdk.init(
+    ignore_errors=[HTTPException]  # workaround to ignore abort() on inside flask-restful
+)
 
 @app.route('/')
 def index():
