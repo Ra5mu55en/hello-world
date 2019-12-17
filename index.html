@@ -16,10 +16,9 @@
 
     function runPyScript(input){
         var jqXHR = $.ajax({
-            type: "POST",
+            type: "GET",
             url: "/login",
-            async: false,
-            data: { mydata: input }
+            async: false
         });
 
         return jqXHR.responseText;
