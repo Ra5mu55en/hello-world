@@ -1,21 +1,20 @@
 <!DOCTYPE html>
   <html lang="en">
     <head>
-      <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></script>
+      <title>Flask Intro - login page</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
     <input id="submitbutton" type="submit" value="Test Send Data">
-    <span id="result">?</span>
-    <span id="test">$</span>
     <!----------------------------------->
     <script type="text/javascript">
 
     function runPyScript(input){
-      var jqXHR = $.ajax({
+        var jqXHR = $.ajax({
             type: "POST",
             url: "/login",
             async: false,
@@ -28,8 +27,9 @@
     $('#submitbutton').click(function(){
         datatosend = 'this is my matrix';
         result = runPyScript(datatosend);
-        $('#result').html('Got back ' + result);
+        console.log('Got back ' + result);
     });
-    </script>
+
+</script>
   </body>
 </html>
